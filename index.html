@@ -40,7 +40,6 @@
 </div>
 
 <script>
-
 function sendToWhatsApp(){
 
 let name = document.getElementById("name").value;
@@ -48,19 +47,18 @@ let mobile = document.getElementById("mobile").value;
 let course = document.getElementById("course").value;
 
 let message =
-"New Student Registration%0A%0A" +
-"Name: " + name + "%0A" +
-"Mobile: " + mobile + "%0A" +
+"New Student Registration\n\n" +
+"Name: " + name + "\n" +
+"Mobile: " + mobile + "\n" +
 "Course: " + course;
 
-let phone = "917670888674"; 
+let phone = "919876543210";   // replace with your number
 
-let url = "https://wa.me/" + phone + "?text=" + message;
+let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
 
 window.open(url, "_blank");
 
 }
-
 </script>
 
 </body>
