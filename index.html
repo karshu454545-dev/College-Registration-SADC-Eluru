@@ -12,9 +12,9 @@
 <div class="container">
 
   <div class="header">
-    <img src="left-logo.png" class="logo-left">
+    <img src="left-logo.png" class="logo-left" alt="College Logo">
     <h1>Sri Aditya Degree College, Eluru, Agraharam</h1>
-    <img src="right-logo.png" class="logo-right">
+    <img src="right-logo.png" class="logo-right" alt="College Logo">
   </div>
 
   <form onsubmit="sendToWhatsApp(); return false;">
@@ -23,7 +23,7 @@
     <input type="text" id="name" placeholder="Enter your name" required>
 
     <label>Mobile Number</label>
-    <input type="tel" id="mobile" placeholder="Enter mobile number" required>
+    <input type="tel" id="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
 
     <label>Select Course</label>
     <select id="course" required>
@@ -42,7 +42,8 @@
   </form>
 
 </div>
-  <section class="info-section">
+
+<section class="info-section">
 
   <h2>Why Choose Sri Aditya Degree College?</h2>
 
@@ -75,9 +76,14 @@
 <script>
 function sendToWhatsApp(){
 
-let name = document.getElementById("name").value;
-let mobile = document.getElementById("mobile").value;
+let name = document.getElementById("name").value.trim();
+let mobile = document.getElementById("mobile").value.trim();
 let course = document.getElementById("course").value;
+
+if(mobile.length !== 10){
+  alert("Enter a valid 10-digit mobile number");
+  return;
+}
 
 let message =
 "New Student Registration\n\n" +
@@ -85,7 +91,7 @@ let message =
 "Mobile: " + mobile + "\n" +
 "Course: " + course;
 
-let phone = "917337276664"; 
+let phone = "91917337276664";  // ⚠️ corrected format
 
 let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
 
