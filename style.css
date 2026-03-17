@@ -5,24 +5,23 @@
     font-family: Arial, sans-serif;
 }
 
+
 body {
     background: url("college.png") no-repeat center center/cover;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Container */
+
 .container {
     width: 90%;
     max-width: 500px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 25px;
     border-radius: 15px;
+    margin: 40px auto; 
 }
 
-/* Header with logos */
+/* Header */
 .header {
     display: flex;
     align-items: center;
@@ -42,12 +41,14 @@ body {
     height: 50px;
     object-fit: contain;
 }
+
 .logo-right {
     width: 60px;
     height: 60px;
     object-fit: contain;
+}
 
-/* Labels */
+
 label {
     display: block;
     margin-top: 10px;
@@ -55,14 +56,14 @@ label {
     font-weight: bold;
 }
 
-/* Inputs */
+
 input, select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
 }
 
-/* Button */
+
 button {
     width: 100%;
     margin-top: 15px;
@@ -78,20 +79,8 @@ button:hover {
     background-color: rgb(215, 117, 6);
 }
 
-button:active {
-    opacity: 0.8;
-}
 
-/* Mobile Fix */
-@media (max-width: 480px) {
-    .container {
-        padding: 20px;
-    }
-
-    .header h1 {
-        font-size: 16px;
-    }
-    .info-section {
+.info-section {
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
@@ -102,6 +91,7 @@ button:active {
 .info-section h2 {
     margin-bottom: 20px;
 }
+
 
 .cards {
     display: grid;
@@ -120,15 +110,19 @@ button:active {
     margin-bottom: 8px;
 }
 
-/* Mobile view */
 @media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 16px;
+    }
+
     .cards {
         grid-template-columns: 1fr;
     }
-}
 
-    .logo {
-        width: 30px;
-        height: 30px;
+    .logo-left,
+    .logo-right {
+        width: 40px;
+        height: 40px;
     }
 }
