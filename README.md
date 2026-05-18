@@ -4,6 +4,7 @@ A clean web-based student registration form for collecting and organizing studen
 
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white)
+!![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
 ## 🔗 Live Demo
 👉 [Click here to view the form](https://karshu454545-dev.github.io/College-Registration-SADC-Eluru/)
