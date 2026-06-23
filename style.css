@@ -9,14 +9,14 @@
 body {
     background: url("college.jpg") no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* smooth effect on PC */
+    background-attachment: fixed; 
     min-height: 100vh;
 }
 
-/* mobile fix for background */
+
 @media (max-width: 600px) {
     body {
-        background-attachment: scroll; /* prevents bugs on mobile */
+        background-attachment: scroll; 
     }
 }
 
@@ -27,7 +27,7 @@ body {
     background-color: rgba(255, 255, 255, 0.65);
     padding: 25px;
     border-radius: 15px;
-    margin: 20px auto; /* reduced for mobile feel */
+    margin: 20px auto; 
 }
 
 /* HEADER */
