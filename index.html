@@ -9,96 +9,108 @@
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <div class="header">
-    <img src="left-logo.png" class="logo-left" alt="College Logo">
-    <h1>Sri Aditya Degree College, Eluru, Agraharam</h1>
-    <img src="right-logo.png" class="logo-right" alt="College Logo">
-  </div>
-
-  <form onsubmit="sendToWhatsApp(); return false;">
-
-    <label>Student Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
-
-    <label>Mobile Number</label>
-    <input type="tel" id="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
-
-    <label>Select Course</label>
-    <select id="course" required>
-      <option value="">-- Select Course --</option>
-      <option>Bsc AI (Artificial Intelligence)</option>
-      <option>BCA (Data Science)</option>
-      <option>BSc (Data Science)</option>
-      <option>BCA (General)</option>
-      <option>BCom</option>
-      <option>BBA (Digital Marketing)</option>
-      <option>Bsc Computers</option>
-    </select>
-
-    <button type="submit">Submit</button>
-
-  </form>
-
-</div>
-
-<section class="info-section">
-
-  <h2>Why Choose Sri Aditya Degree College?</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>🎓 Courses Offered</h3>
-      <p>BCA, BSc Data Science, BBA, BCom and more industry-focused programs.</p>
+    <div class="header">
+      <img src="left-logo.png" class="logo-left" alt="College Logo">
+      <h1>Sri Aditya Degree College, Eluru, Agraharam</h1>
+      <img src="right-logo.png" class="logo-right" alt="College Logo">
     </div>
 
-    <div class="card">
-      <h3>💼 Placements</h3>
-      <p>Up to 90% placement support with training and career guidance.</p>
-    </div>
+    <form onsubmit="sendToWhatsApp(); return false;">
 
-    <div class="card">
-      <h3>🏢 Top Recruiters</h3>
-      <p>TCS, Infosys, Wipro, Tech Mahindra, HCL and more.</p>
-    </div>
+      <label>Student Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <label>Marks (10th)</label>
+      <input type="text" id="sscmarks" placeholder="Enter 10th marks" required>
 
-    <div class="card">
-      <h3>📚 Facilities</h3>
-      <p>Modern labs, experienced faculty, digital classrooms and library.</p>
-    </div>
+      <label>Marks (intermediate)</label>
+      <input type="text" id="ipemarks" placeholder="Enter intermediate marks" required>
+
+
+      <label>Mobile Number</label>
+      <input type="tel" id="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+
+      <label>Select Course</label>
+      <select id="course" required>
+        <option value="">-- Select Course --</option>
+        <option>Bsc AI (Artificial Intelligence)</option>
+        <option>BCA (Data Science)</option>
+        <option>BSc (Data Science)</option>
+        <option>BCA (General)</option>
+        <option>BCom</option>
+        <option>BBA (Digital Marketing)</option>
+        <option>Bsc Computers</option>
+      </select>
+
+      <button type="submit">Submit</button>
+
+    </form>
 
   </div>
 
-</section>
+  <section class="info-section">
 
-<script>
-function sendToWhatsApp(){
+    <h2>Why Choose Sri Aditya Degree College?</h2>
 
-let name = document.getElementById("name").value.trim();
-let mobile = document.getElementById("mobile").value.trim();
-let course = document.getElementById("course").value;
+    <div class="cards">
 
-if(mobile.length !== 10){
-  alert("Enter a valid 10-digit mobile number");
-  return;
-}
+      <div class="card">
+        <h3>🎓 Courses Offered</h3>
+        <p>BCA, BSc Data Science, BBA, BCom and more industry-focused programs.</p>
+      </div>
 
-let message =
-"New Student Registration\n\n" +
-"Name: " + name + "\n" +
-"Mobile: " + mobile + "\n" +
-"Course: " + course;
+      <div class="card">
+        <h3>💼 Placements</h3>
+        <p>Up to 90% placement support with training and career guidance.</p>
+      </div>
 
-let phone = "917337276664";  // ⚠️ corrected format
+      <div class="card">
+        <h3>🏢 Top Recruiters</h3>
+        <p>TCS, Infosys, Wipro, Tech Mahindra, HCL and more.</p>
+      </div>
 
-let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+      <div class="card">
+        <h3>📚 Facilities</h3>
+        <p>Modern labs, experienced faculty, digital classrooms and library.</p>
+      </div>
 
-window.open(url, "_blank");
+    </div>
 
-}
-</script>
+  </section>
+
+  <script>
+    function sendToWhatsApp() {
+
+      let name = document.getElementById("name").value.trim();
+      let mobile = document.getElementById("mobile").value.trim();
+      let course = document.getElementById("course").value;
+      let sscMarks = document.getElementById("sscmarks").value;
+      let interMarks = document.getElementById("ipemarks").value;
+
+      if (mobile.length !== 10) {
+        alert("Enter a valid 10-digit mobile number");
+        return;
+      }
+
+
+      let message =
+        "New Student Registration\n\n" +
+        "Name: " + name + "\n" +
+        "Mobile: " + mobile + "\n" +
+        "Course: " + course + "\n" +
+        "10th Marks: " + sscMarks + "\n" +
+        "Intermediate Marks: " + interMarks;
+
+      let phone = "917337276664";  // ⚠️ corrected format
+
+      let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+      window.open(url, "_blank");
+
+    }
+  </script>
 
 </body>
+
 </html>
